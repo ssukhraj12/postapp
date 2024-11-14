@@ -21,10 +21,9 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>User_id</th>
-                        <th>Post Title</th>
-                        <th>Actions</th>
+                        <th>UserID</th>
+                        <th>Username</th>
+                        <th>PostCount</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -33,7 +32,7 @@
                             <tr>
                                 <td>{{$post->id}}</td>
                                 <td>{{$post->username}}</td>
-                                <td>{{$post->id}}</td>
+                                <td>{{$post->posts_count}}</td>
                             </tr>
                         @endforeach
                     @else

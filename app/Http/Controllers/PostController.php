@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function index(){
-        $posts = User::with('posts')->paginate(5);
+        $posts = User::with('posts')->withCount('posts')->paginate(5);
         return view('welcome',[
             'posts'=>$posts,
         ]);
