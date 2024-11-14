@@ -15,11 +15,11 @@ class PostsTableSeeder extends Seeder
     public function run(): void
     {
 
-//        $userIds = User::pluck('id')->all();
-//
-//        Post::factory()->count(5000)->make()->each(function ($post) use ($userIds) {
-//            $post->user_id = $userIds[array_rand($userIds)];
-//            $post->save();
-//        });
+        $userIds = User::pluck('id')->all();
+
+        Post::factory()->count(5000)->make()->each(function ($post) use ($userIds) {
+            $post->user_id = $userIds[array_rand($userIds)];
+            $post->save();
+        });
     }
 }
